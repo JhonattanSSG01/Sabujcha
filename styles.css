@@ -1,0 +1,51 @@
+body + .container-body{
+  background-image: url(Imagenes/bg-1.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.container{
+  max-width: 1900px;
+  margin: 25px auto;
+}
+
+.container > .header-flex{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-nav > nav > ul{
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  padding: 0;
+}
+
+.header-nav li > a{
+  margin: 0 25px;
+  text-decoration: none;
+  color: #000000;
+}
+
+.slider > img{
+  position: relative;
+  width: 100%;
+}
+
+.description-slider{
+  position: absolute;
+  bottom: -30%;
+  left: 32%;
+  text-align: center;
+}
+
+.description-slider > h1{
+  font-size: 80px;
+}
+
+.description-slider a {
+  font-size: 30px;
+  text-decoration: none;
+  color: #000000;
+}
