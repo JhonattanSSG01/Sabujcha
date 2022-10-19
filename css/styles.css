@@ -1,0 +1,123 @@
+/* Fuentes importadas de Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans&display=swap');
+
+/* Fuentes generales */
+h1{
+  font-family: 'Playfair Display', serif;
+}
+
+p, h2{
+  font-family: 'Lora', serif;
+}
+
+h3{
+  font-family: 'Work Sans', sans-serif;
+}
+
+/* Estilos para body */
+.container-body{
+  background-color: #FFFFFF;
+}
+
+.container{
+  max-width: 1900px;
+  margin: 2em auto;
+}
+
+/* Estilos para Header */
+.container > .header-flex{
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-logo{
+  width: 35%;
+}
+
+/* Nav */
+.header-nav > nav > ul{
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+}
+
+.header-nav li > a{
+  margin-right: 4rem;
+  text-decoration: none;
+  color: #000000;
+  font-weight: bold;
+  font-family: 'Work Sans', sans-serif;
+}
+
+/* Estilos para Slider */
+
+.slider{
+  width: 100%;
+  height: 80vh;
+  background-image: url(/Imagenes/slider-2.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  text-align: center;
+}
+
+.description-slider{
+  grid-area: 2 / 2 / 3 / 3;
+}
+
+.description-slider > h1{
+  font-size: 4rem;
+}
+
+.description-slider a {
+  font-size: 25px;
+  color: #000000;
+  font-weight: 600;
+}
+
+/* Estilos para Main */
+/* Estilos para primera secci[on de cards */
+/* .container > .sale-cards{
+  display: grid;
+  grid-template-columns: 14% 35% 2% 35% 14%;
+  grid-template-rows: 3rem 10rem 10rem 3rem;
+}
+
+.sale-cards > .card:first-child{
+  grid-area: 2 / 2 / 4 / 3;
+  padding: 40px 0;
+  background-image: url(/Imagenes/banner-1.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.sale-cards > .card:nth-child(2) {
+  grid-area: 2 / 4 / 4 / 5;
+  padding: 40px 0;
+  background-image: url(/Imagenes/banner-2.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.card > h2{
+  margin-bottom: 0;
+  padding: 0 25px;
+  font-size: 60px;
+  color: #529F0F;
+}
+
+.card > h3 {
+  padding: 0 25px;
+  font-size: 20px;
+  text-transform: uppercase;
+} */
+
+/* Estilos para segunda secci[on de cards */
