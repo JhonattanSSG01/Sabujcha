@@ -85,7 +85,7 @@ h3{
 
 /* Estilos para Main */
 /* Estilos para primera secci[on de cards */
-/* .container > .sale-cards{
+.container > .sale-cards{
   display: grid;
   grid-template-columns: 14% 35% 2% 35% 14%;
   grid-template-rows: 3rem 10rem 10rem 3rem;
@@ -118,6 +118,6 @@ h3{
   padding: 0 25px;
   font-size: 20px;
   text-transform: uppercase;
-} */
+}
 
 /* Estilos para segunda secci[on de cards */
