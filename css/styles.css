@@ -122,7 +122,7 @@ h3{
 }
 
 /* Estilos para segunda seccion de cards */
-.latest-products, .new-products, .latest-news{
+.latest-products, .new-products, .latest-news, .footer-seccion{
   padding: 50px 0;
   background-image: url(/Imagenes/bg-1.jpg);
   background-repeat: no-repeat;
@@ -141,7 +141,7 @@ h3{
   margin: 30px 0 5px 0;
 }
 
-.latest-products .products-cards , .new-products .products-cards, .latest-news .products-cards{
+.latest-products .products-cards, .new-products .products-cards, .latest-news .products-cards, .sponsors .products-cards, .footer-seccion{
   width: 70%;
   margin: 0 auto;
   padding-top: 20px;
@@ -336,4 +336,32 @@ h3{
   color: #000000;
   text-transform: uppercase;
   font-weight: 600;
+}
+
+/* Estilos para los patrocinadores */
+
+.container .sponsors{
+  margin: 30px;
+  padding: 60px 0;
+}
+
+/* Estilos para el footer */
+.container .footer-seccion{
+  width: 100%;
+  text-transform: capitalize;
+}
+
+.footer-seccion > ul > h3{
+  font-size: 25px;
+}
+
+.footer-seccion > ul > li{
+  list-style: none;
+  line-height: 55px;
+}
+
+.footer-seccion > ul > li > a{
+  font-size: 20px;
+  color: #000000;
+  text-decoration: none;
 }
