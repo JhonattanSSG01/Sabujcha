@@ -8,55 +8,73 @@ h1{
   font-family: 'Playfair Display', serif;
 }
 
-p, h2{
+h2{
+  font-size: 45px;
+  font-weight: lighter;
   font-family: 'Lora', serif;
 }
 
 h3{
+  font-weight: lighter;
+  font-family: 'Lora', serif;
+}
+
+h4, 
+p{
   font-family: 'Work Sans', sans-serif;
 }
 
-/* Estilos para body */
+/* body */
 .container-body{
+  width: 90%;
+  margin: 0 auto;
   background-color: #FFFFFF;
 }
 
-.container{
-  max-width: 1900px;
-  margin: 2em auto;
-}
-
-/* Estilos para Header */
-.container > .header-flex{
-  padding: 0 2rem;
+/* Header */
+header > .header-flex{
+  padding: 2rem 1.5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-.header-logo{
-  width: 35%;
 }
 
 /* Nav */
 .header-nav > nav > ul{
   padding: 0;
   display: flex;
-  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
   list-style: none;
 }
 
 .header-nav li > a{
-  margin-right: 4rem;
+  margin-right: 3rem;
   text-decoration: none;
   color: #000000;
   font-weight: bold;
   font-family: 'Work Sans', sans-serif;
+  text-transform: uppercase;
+}
+/* End Nav */
+
+.header-flex .header-logo{
+  width: 32%;
 }
 
-/* Estilos para Slider */
+.header-flex .header-buy select{
+  font-family: 'Work Sans', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  border: 1px solid #FFFFFF;
+}
 
-.slider{
+.header-flex .header-buy i {
+  margin-left: 1rem;
+}
+
+/* Slider */
+.container > .slider{
   width: 100%;
   height: 80vh;
   background-image: url(/Imagenes/slider-2.jpg);
@@ -69,24 +87,27 @@ h3{
   text-align: center;
 }
 
-.description-slider{
+.slider .description-slider{
   grid-area: 2 / 2 / 3 / 3;
 }
 
-.description-slider > h1{
-  font-size: 4rem;
+.description-slider h1{
+    margin-bottom: 5px;
+    font-size: 60px;
+    font-weight: 300;
 }
 
-.description-slider a {
-  font-size: 25px;
+.description-slider a{
+  font-size: 20px;
   color: #000000;
   font-weight: 600;
+  font-family: 'Work Sans', sans-serif;
 }
 
-/* Estilos para Main */
-/* Estilos para primera secci[on de cards */
+/* Main */
+/* Primera seccion de cards */
 .container > .sale-cards{
-  margin: 25px 0;
+  margin: 2rem 0;
   display: grid;
   grid-template-columns: 14% 35% 2% 35% 14%;
   grid-template-rows: 4rem 10rem 10rem 4rem;
@@ -94,7 +115,6 @@ h3{
 
 .sale-cards > .card:first-child{
   grid-area: 2 / 2 / 4 / 3;
-  padding: 40px 0;
   background-image: url(/Imagenes/banner-1.png);
   background-repeat: no-repeat;
   background-size: 100% 100%;
@@ -102,54 +122,71 @@ h3{
 
 .sale-cards > .card:nth-child(2) {
   grid-area: 2 / 4 / 4 / 5;
-  padding: 40px 0;
   background-image: url(/Imagenes/banner-2.png);
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
 
+.sale-cards .card{
+  padding: 4rem 1.5rem;
+}
+
 .card > h2{
   margin-bottom: 0;
-  padding: 0 25px;
-  font-size: 60px;
   color: #529F0F;
 }
 
-.card > h3 {
-  padding: 0 25px;
-  font-size: 20px;
+.card > h4{
+  font-size: 18px;
   text-transform: uppercase;
 }
 
-/* Estilos para segunda seccion de cards */
-.latest-products, .new-products, .latest-news, .footer-seccion{
-  padding: 50px 0;
+/* Segunda seccion de cards */
+.latest-products, 
+.latest-news{
+  padding: 3rem 0;
   background-image: url(/Imagenes/bg-1.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-.latest-products > .products-title, .new-products > .products-title, .latest-news > .products-title{
+.new-products,
+.footer-seccion{
+  padding: 3rem 0;
+  background-color: #F8F8F8;
+}
+
+.products-title{
   width: 30%;
-  margin: 45px auto;
+  margin: 3rem auto;
   text-align: center;
 }
 
 .products-title > h2{
-  font-size: 40px;
   text-transform: capitalize;
   margin: 30px 0 5px 0;
 }
 
-.latest-products .products-cards, .new-products .products-cards, .latest-news .products-cards, .sponsors .products-cards, .footer-seccion{
-  width: 70%;
-  margin: 0 auto;
-  padding-top: 20px;
-  display: flex;
-  justify-content: space-evenly;
+.products-title h3{
+    font-size: 18px;
 }
 
-.products-cards > .card{
+.latest-products .products-cards, 
+.new-products .products-cards, 
+.latest-news .products-cards,
+.sponsors .products-cards,
+.footer-seccion .footer-links,
+.copyright-footer .copyright{
+  width: 70%;
+  margin: 0 auto;
+  padding-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  /* flex-wrap: wrap; */
+}
+
+.latest-products .products-cards > .card,
+.new-products .products-cards > .card{
   width: 300px;
   height: 300px;    
 }
@@ -181,59 +218,69 @@ h3{
 .products-cards > .card > .circle-sale{
   width: 45px;
   height: 45px;
-  margin-left: 15px;
+  margin-left: 1rem;
   background-color: #529F0F;
   border-radius: 50%;
   text-align: center;
 }
 
-.circle-sale > p{
-  padding: 13px 0;
+.circle-sale > h3{
+  padding: 0.8rem 0;
   font-size: 14px;
   font-weight: 600;
   color: #FFFFFF;
 }
 
-.products-cards > .name-price, .products-cards > .descrition-news{
+.products-cards > .name-price{
   width: 300px;
-  margin: 20px 0 25px 0;
+  margin: 1rem 0 1.5rem 0;
 }
 
-.name-price > p{
+.name-price > h4{
+  color: #737373;
   text-transform: capitalize;
+  font-weight: 600;
+}
+
+.name-price p {
   font-weight: 600;
 }
 
 .products-price > span{
   text-decoration: line-through;
   font-weight: 600;
-  color: #B9B9B9;
+  color: #737373;
 }
 
-.container .description-testi{
+
+/* Testi */
+.container > .description-testi{
   width: 40%;
-  margin: 80px auto;
+  margin: 5rem auto;
   text-align: center;
 }
 
-.description-testi .author h2{
+.description-testi .author h3{
+  font-size: 22px;
   text-transform: capitalize;
   font-style: italic;
 }
 
-.description-testi .author h3 {
-  margin: 45px 0;
-  text-transform: capitalize;
+.description-testi .author h4 {
+  margin: 3rem 0 4rem 0;
   font-size: 16px;
-  line-height: 30px;
+  line-height: 1.5rem;
+  text-transform: uppercase;
 }
 
 .description-testi .author span{
+  text-transform: capitalize;
   color: #B9B9B9;
   font-size: 15px;
 }
 
-.new-products .products-cards {
+/* 3ra cards */
+.new-products .products-cards{
   flex-wrap: wrap;
 }
 
@@ -285,8 +332,8 @@ h3{
   background-size: 100% 100%;
 }
 
-/* Estilos para el fomulario suscribe */
-.container .subscribe{
+/* Form suscribe */
+.container > .subscribe{
   background-image: url(/Imagenes/bg-2.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -295,73 +342,109 @@ h3{
 .subscribe{
   width: 100%;
   height: 25vh;
-  padding: 55px 0;
+  padding: 4rem 0;
   text-align: center;
 }
 
-.subscribe > h2{
-  font-size: 40px;
+.subscribe > h1{
+  font-size: 45px;
+  font-weight: 40;
+}
+
+.subscribe > .form-subscribe{
+  margin: 3rem;
 }
 
 .subscribe > .form-subscribe input{
   width: 20%;
-  padding: 20px;
+  padding: 1.5rem 1rem;
   border: 1px solid #B9B9B9;
 }
 
 .subscribe > .form-subscribe button {
   width: 10%;
-  padding: 20px;
+  padding: 1.5rem 1rem;
   background-color: #000000;
   color: #FFFFFF;
   text-transform: uppercase;
 }
 
-/* Estilos para las noticias */
-.latest-news > .products-title > h2{
-  text-decoration: underline;
+/* News */
+.latest-news > .products-title > hr{
+  width: 60%;
 }
 
-.latest-news .card {
-  margin-bottom: 60px;
+.latest-news .products-cards > .card{
+  width: 30%;
 }
 
-.latest-news .description-news > .month{
+.description-news > .month{
   color: #529F0F;
+  font-size: 18px;
+  font-weight: 600;
   text-decoration: underline;
   font-style: italic;
 }
 
-.latest-news .description-news > .link-news > a{
+.description-news h3:nth-of-type(2) {
+  font-size: 25px;
+  font-weight: 600;
+  line-height: 2rem;
+}
+
+.description-news h3:nth-of-type(3) {
+  color: #737373;
+  line-height: 2rem;
+}
+
+.description-news > .link-news > a{
+  padding: 1.5rem 0;
   color: #000000;
   text-transform: uppercase;
   font-weight: 600;
 }
 
-/* Estilos para los patrocinadores */
-
-.container .sponsors{
-  margin: 30px;
-  padding: 60px 0;
+/* Patrocinadores */
+.container > .sponsors{
+  margin: 2rem;
+  padding: 4rem 0;
 }
 
-/* Estilos para el footer */
-.container .footer-seccion{
-  width: 100%;
+/* Footer */
+.footer-seccion .footer-links > ul{
+  padding: 0;
   text-transform: capitalize;
 }
 
-.footer-seccion > ul > h3{
+.footer-links > ul > h3{
   font-size: 25px;
+  font-weight: 600;
 }
 
-.footer-seccion > ul > li{
+.footer-links > ul > li,
+.number > li{
   list-style: none;
-  line-height: 55px;
+  line-height: 40px;
 }
 
-.footer-seccion > ul > li > a{
-  font-size: 20px;
+.footer-links > ul > li > a, 
+.number > li > a{
+  font-size: 18px;
   color: #000000;
   text-decoration: none;
+  font-family: 'Playfair Display', serif;
 }
+
+.footer-links > ul .number {
+  padding: 1.5rem 0;
+}
+
+.copyright-footer,
+.copyright,
+.copyright span{
+  background-color: #EBEBEB;
+  align-items: center;
+  font-weight: 600;
+}
+
+
