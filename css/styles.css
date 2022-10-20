@@ -86,9 +86,10 @@ h3{
 /* Estilos para Main */
 /* Estilos para primera secci[on de cards */
 .container > .sale-cards{
+  margin: 25px 0;
   display: grid;
   grid-template-columns: 14% 35% 2% 35% 14%;
-  grid-template-rows: 3rem 10rem 10rem 3rem;
+  grid-template-rows: 4rem 10rem 10rem 4rem;
 }
 
 .sale-cards > .card:first-child{
@@ -120,4 +121,219 @@ h3{
   text-transform: uppercase;
 }
 
-/* Estilos para segunda secci[on de cards */
+/* Estilos para segunda seccion de cards */
+.latest-products, .new-products, .latest-news{
+  padding: 50px 0;
+  background-image: url(/Imagenes/bg-1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.latest-products > .products-title, .new-products > .products-title, .latest-news > .products-title{
+  width: 30%;
+  margin: 45px auto;
+  text-align: center;
+}
+
+.products-title > h2{
+  font-size: 40px;
+  text-transform: capitalize;
+  margin: 30px 0 5px 0;
+}
+
+.latest-products .products-cards , .new-products .products-cards, .latest-news .products-cards{
+  width: 70%;
+  margin: 0 auto;
+  padding-top: 20px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.products-cards > .card{
+  width: 300px;
+  height: 300px;    
+}
+
+.latest-products .products-cards > .card:nth-of-type(1){
+  background-image: url(/Imagenes/product-1.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.latest-products .products-cards > .card:nth-of-type(2){
+  background-image: url(/Imagenes/product-2.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.latest-products .products-cards > .card:nth-of-type(3){
+  background-image: url(/Imagenes/product-3.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.latest-products .products-cards > .card:nth-of-type(4){
+  background-image: url(/Imagenes/product-4.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.products-cards > .card > .circle-sale{
+  width: 45px;
+  height: 45px;
+  margin-left: 15px;
+  background-color: #529F0F;
+  border-radius: 50%;
+  text-align: center;
+}
+
+.circle-sale > p{
+  padding: 13px 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: #FFFFFF;
+}
+
+.products-cards > .name-price, .products-cards > .descrition-news{
+  width: 300px;
+  margin: 20px 0 25px 0;
+}
+
+.name-price > p{
+  text-transform: capitalize;
+  font-weight: 600;
+}
+
+.products-price > span{
+  text-decoration: line-through;
+  font-weight: 600;
+  color: #B9B9B9;
+}
+
+.container .description-testi{
+  width: 40%;
+  margin: 80px auto;
+  text-align: center;
+}
+
+.description-testi .author h2{
+  text-transform: capitalize;
+  font-style: italic;
+}
+
+.description-testi .author h3 {
+  margin: 45px 0;
+  text-transform: capitalize;
+  font-size: 16px;
+  line-height: 30px;
+}
+
+.description-testi .author span{
+  color: #B9B9B9;
+  font-size: 15px;
+}
+
+.new-products .products-cards {
+  flex-wrap: wrap;
+}
+
+.new-products .products-cards > .card:nth-of-type(1){
+  background-image: url(/Imagenes/product-1.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.new-products .products-cards > .card:nth-of-type(2){
+  background-image: url(/Imagenes/product-3.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.new-products .products-cards > .card:nth-of-type(3){
+  background-image: url(/Imagenes/product-5.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.new-products .products-cards > .card:nth-of-type(4){
+  background-image: url(/Imagenes/product-7.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.new-products .products-cards > .card:nth-of-type(5){
+  background-image: url(/Imagenes/product-2.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.new-products .products-cards > .card:nth-of-type(6){
+  background-image: url(/Imagenes/product-4.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.new-products .products-cards > .card:nth-of-type(7){
+  background-image: url(/Imagenes/product-6.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.new-products .products-cards > .card:nth-of-type(8){
+  background-image: url(/Imagenes/product-8.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+/* Estilos para el fomulario suscribe */
+.container .subscribe{
+  background-image: url(/Imagenes/bg-2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.subscribe{
+  width: 100%;
+  height: 25vh;
+  padding: 55px 0;
+  text-align: center;
+}
+
+.subscribe > h2{
+  font-size: 40px;
+}
+
+.subscribe > .form-subscribe input{
+  width: 20%;
+  padding: 20px;
+  border: 1px solid #B9B9B9;
+}
+
+.subscribe > .form-subscribe button {
+  width: 10%;
+  padding: 20px;
+  background-color: #000000;
+  color: #FFFFFF;
+  text-transform: uppercase;
+}
+
+/* Estilos para las noticias */
+.latest-news > .products-title > h2{
+  text-decoration: underline;
+}
+
+.latest-news .card {
+  margin-bottom: 60px;
+}
+
+.latest-news .description-news > .month{
+  color: #529F0F;
+  text-decoration: underline;
+  font-style: italic;
+}
+
+.latest-news .description-news > .link-news > a{
+  color: #000000;
+  text-transform: uppercase;
+  font-weight: 600;
+}
