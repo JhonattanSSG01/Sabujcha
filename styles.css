@@ -25,6 +25,11 @@ p {
 }
 
 /* body */
+body{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 .container-body {
   margin: 0 5rem;
   background-color: #ffffff;
@@ -73,7 +78,7 @@ header > .header-flex,
 
 /* Slider */
 .container > .slider {
-  background-image: url(Imagenes/slider-2.jpg);
+  background-image: url(./Imagenes/slider-2.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -109,13 +114,13 @@ header > .header-flex,
 }
 
 .sale-cards > .card:first-of-type {
-  background-image: url(Imagenes/banner-1.png);
+  background-image: url(./Imagenes/banner-1.png);
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
 
 .sale-cards > .card:nth-of-type(2) {
-  background-image: url(Imagenes/banner-2.png);
+  background-image: url(./Imagenes/banner-2.png);
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
@@ -141,7 +146,7 @@ header > .header-flex,
 .latest-products,
 .latest-news {
   padding: 3rem 0;
-  background-image: url(Imagenes/bg-1.jpg);
+  background-image: url(./Imagenes/bg-1.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -251,7 +256,7 @@ header > .header-flex,
 
 /* Form suscribe */
 .container > .subscribe {
-  background-image: url(Imagenes/bg-2.jpg);
+  background-image: url(./Imagenes/bg-2.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -323,8 +328,8 @@ header > .header-flex,
 
 /* Patrocinadores */
 .container > .sponsors > .products-cards {
-  width: 100%;
-  margin: 4rem 0;
+  width: 80%;
+  margin: 4rem auto;
 }
 
 .sponsors .logo-sponsors {
