@@ -41,9 +41,9 @@ header > .header-flex,
 }
 
 /* Nav */
-/* .nav-label, .nav-input{
+.nav-label, .nav-input{
   display: none;
-} */
+}
 
 .header-nav li > a {
   margin-right: 3rem;
@@ -363,7 +363,7 @@ header > .header-flex,
   font-weight: 600;
 }
 
-/* @media screen and (max-width: 640px) {
+@media screen and (max-width: 640px) {
 
   .nav-label{
     display: flex;
@@ -401,7 +401,7 @@ header > .header-flex,
     text-align: right;
   }
 
-  .container-body {
+  /* .container-body {
     margin: 0 1rem;
   }
 
@@ -524,5 +524,5 @@ header > .header-flex,
   .copyright img {
     width: 90%;
     margin: 1rem;
-  }
-} */
+  } */
+}
