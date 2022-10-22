@@ -364,11 +364,37 @@
           </section>
         </div>
         <!-- End Legalidad y pagos -->
+        <!-- Start Punto de enclaje para Mobile -->
+        <div class="top">
+          <a href="#">
+            <i class="fa-solid fa-angles-up"></i>
+          </a>
+        </div>
+        <!-- End Punto de enclaje -->
       </div>
     </footer>
     <!-- End Footer -->
   </div>
   <!-- End Contenedor general -->
+
+  <!-- Parte de funcionalidad con la ayuda de JS para el punto de enclaje -->
+  <script>
+    document.getElementById("myBtn").click();
+    function myFunction(id) {
+      var x = document.getElementById(id);
+      if (x.className.indexOf("show") == -1) {
+        x.className += "show";
+      } else {
+        x.className = x.className.replace("show", "");
+      }
+    }
+
+    function likeFunction(x) {
+      x.style.fontWeight = "bold";
+      x.innerHTML = "✓ Liked";
+    }
+  </script>
+
 </body>
 <!-- End Contenido -->
 </html>
