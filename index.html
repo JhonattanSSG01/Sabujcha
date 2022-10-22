@@ -1,29 +1,40 @@
+<!-- DOCTYPE tiene la función de espresar al navegador que versión de document HTML usaremos, en este caso es HTML5 -->
 <!DOCTYPE html>
+
+<!-- Start Documento HTML -->
 <html lang="en">
 
-<head>
+<!-- En la parte del HEAD utilizamos etiquetas acordes para importar recursos como el archivo de CSS, 
+  manifestar el lenguaje estandar para que admita caracteres especiales y la medida estandar para poder trabajar responsive -->
+  <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Se imporat los estilos de CSS -->
+  <!-- Se importa los estilos de CSS -->
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="fontawesome-free-6.2.0-web/css/all.css">
+  <!-- Tutulo visaulizable en la pestaña de los navegadores -->
   <title>Sabujcha</title>
 </head>
 
+<!-- En la parte de BODY se desarrollar todo lo que se podrá visualizar en el navegador -->
 <!-- Start contenido -->
 <body>
+  <!-- Contenedor general para abarcar todo el contenido -->
   <div class="container-body">
+    <!-- En la parte de HEADER se desarrolla el encabezado de la página web -->
     <!-- Start Header -->
     <header>
       <div class="header-flex">
         <!-- Start Nav -->
         <section class="header-nav">
           <nav>
+            <!-- Start Seccion para el menu hamburguesa -->
             <label for="menu" class="nav-label">
               <i class="nav-icon fa-solid fa-bars"></i>
             </label>
             <input type="checkbox" id="menu" class="nav-input">
+            <!-- End Seccion hamburguesa -->
             <ul class="nav-menu">
               <li><a href="">Home</a></li>
               <li><a href="">About</a></li>
@@ -34,9 +45,11 @@
           </nav>
         </section>
         <!-- End Nav -->
+        <!-- Contendor para el logo de la empresa -->
         <section class="header-logo">
           <img src="./Imagenes/logo.png" alt="logo de la empresa">
         </section>
+        <!-- Contendor para la parte de compras y cambio de moneda local -->
         <section class="header-buy">
           <select name="" id="cash">
             <option value="USD" selected>USD</option>
@@ -49,7 +62,7 @@
       </div>
     </header>
     <!-- End Header -->
-    <!-- Start slider -->
+    <!-- Start contenedor slider -->
     <div class="container">
       <div class="slider">
         <section class="description-slider">
@@ -58,13 +71,14 @@
             <a href="">Shop Now</a>
           </p>
         </section>
-
       </div>
     </div>
     <!-- End slider -->
+
+    <!-- En la parte de MAIN se desarrolla todo el contenido relacionado con la página web -->
     <!-- Start Main -->
     <main>
-      <!-- Start 1er tarjetas -->
+      <!-- Start Contenedor 1er seccion de tarjetas que abarca el contenido de grandes promociones para los productos -->
       <div class="container">
         <div class="sale-cards">
           <section class="card">
@@ -76,8 +90,8 @@
             <h4>winter vacation</h4>
           </section>
         </div>
-        <!-- End 1er tarjetas -->
-        <!-- Start 2da tarjetas -->
+        <!-- End 1er seccion de tarjetas -->
+        <!-- Start Contenedor 2da seccion de tarjetas que abarca el contenido de productos antiguos con los precios y allgunos de ellos con promoción -->
         <div class="latest-products">
           <section class="products-title">
             <h2>latest products</h2>
@@ -120,8 +134,8 @@
             </section>
           </section>
         </div>
-        <!-- End 2da tarjetas -->
-        <!-- Start testi -->
+        <!-- End 2da Sseccion de tarjetas -->
+        <!-- Start Contenedor sobre una frase de algún testimonio -->
         <div class="description-testi">
           <img src="./Imagenes/testi.png" alt="Imagen de testi">
           <article class="author">
@@ -130,8 +144,8 @@
             <h4>gregory perkins <br> <span>customer</span></h4>
           </article>
         </div>
-        <!-- End testi -->
-        <!-- Start 3ra tarjetas -->
+        <!-- End Testimonio -->
+        <!-- Start Contenedor 3ra seccion de tarjetas que abarca el contenido de productos reicnetes con los precios y allgunos de ellos con promoción -->
         <div class="new-products">
           <section class="products-title">
             <h2>new products</h2>
@@ -213,8 +227,8 @@
           </section>
         </div>
       </div>
-      <!-- End 3ra tarjetas -->
-      <!-- Start form -->
+      <!-- End 3ra Seccion de tarjetas -->
+      <!-- Start Contenedor para un pequeño formulario de suscripción -->
       <div class="container">
         <div class="subscribe">
           <h1>Join to our Newsletter</h1>
@@ -223,8 +237,8 @@
             <button type="submit">subscribe</button>
           </form>
         </div>
-        <!-- End form -->
-        <!-- Start News -->
+        <!-- End Formulario -->
+        <!-- Start Contenedor de tarjetas para abarcar noticias relevantes a productos con fecha y descripción detallada -->
         <div class="latest-news">
           <section class="products-title">
             <h2>latest products</h2>
@@ -267,8 +281,8 @@
           </section>
         </div>
       </div>
-      <!-- End News -->
-      <!-- Start Patrocinadores -->
+      <!-- End Seccion de noticias -->
+      <!-- Start Contenedor de los patrocinadores actuales para la empresa -->
       <div class="container">
         <div class="sponsors">
           <section class="products-cards">
@@ -293,9 +307,12 @@
       <!-- End Patrocinadores -->
     </main>
     <!-- End Main -->
+
+    <!-- En la parte de FOOTER se desarrolla pie de página de la página web -->
     <!-- Start Footer -->
     <footer>
       <div class="container">
+        <!-- Start Contenedor sobre los enlaces directos a diferentes vistas sobre información de la empresa -->
         <div class="footer-seccion">
           <section class="footer-links">
             <ul>
@@ -338,17 +355,21 @@
             </ul>
           </section>
         </div>
+        <!-- End Seccion de enlaces -->
+        <!-- Start Contenedor sobre la legalidad y los medios de pago disponibles -->
         <div class="copyright-footer">
           <section class="copyright">
             <h3>© 2021 <span>SabujCha</span> Made With 💚 By <span>HasThemes.</span></h3>
             <img src="./Imagenes/payment.png" alt="Iamgen sobre pagos">
           </section>
         </div>
+        <!-- End Legalidad y pagos -->
       </div>
     </footer>
     <!-- End Footer -->
   </div>
+  <!-- End Contenedor general -->
 </body>
-<!-- End contenido -->
-
+<!-- End Contenido -->
 </html>
+<!-- End Documento HTML -->

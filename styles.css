@@ -3,7 +3,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Lora&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans&display=swap");
 
-/* Fuentes generales */
+/* Fuentes de letras generales que se usarán en la página web*/
 h1 {
   font-family: "Playfair Display", serif;
 }
@@ -24,18 +24,22 @@ p {
   font-family: "Work Sans", sans-serif;
 }
 
-/* body */
+/* BODY */
+/* Se resetea el modelo de caja y se le aplica una nuevas medidas */
 body{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
 .container-body {
   margin: 0 5rem;
   background-color: #ffffff;
 }
 
 /* Header */
+/* Se especifica la orientación en una misama linea en que se visualizará
+ el encabezado e igualmente el menú con la ayuda de FLEX BOX */
 header > .header-flex,
 .header-nav > nav > .nav-menu {
   padding: 1rem 1.5rem;
@@ -46,6 +50,10 @@ header > .header-flex,
 }
 
 /* Nav */
+/* Se coloca varias propiedades para dar estilos al menú, al contenedor 
+ del logo, a la sección de cambio de modena local y a la aprte del carrito de compras. 
+ Además se la da como instrucción al menu hamburguesa para 
+ que se oculte mientras este en resoluciones de Desktop */
 .nav-label,
 .nav-input {
   display: none;
@@ -77,6 +85,10 @@ header > .header-flex,
 }
 
 /* Slider */
+/* Se agrega la imagen para el slider principal con sus propiedades acordes,
+ También se agrega una CUADRICULA(GRID LAYAUT) para poder centrar mejor el texto
+ principal sin necesidad de un marigin o padding lo cual afecta algunas veces un
+ comportamiento no deseado en resoluciones  pequeñas. Ej: Mobile.  */
 .container > .slider {
   background-image: url(./Imagenes/slider-2.jpg);
   background-repeat: no-repeat;
@@ -487,7 +499,7 @@ header > .header-flex,
     width: 55px;
     height: 55px;
     top: 20px;
-    left: 50px;
+    left: 20px;
   }
 
   .circle-sale > h3 {
