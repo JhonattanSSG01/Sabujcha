@@ -8,12 +8,7 @@ h1 {
   font-family: "Playfair Display", serif;
 }
 
-h2 {
-  font-size: 45px;
-  font-weight: lighter;
-  font-family: "Lora", serif;
-}
-
+h2,
 h3 {
   font-weight: lighter;
   font-family: "Lora", serif;
@@ -158,7 +153,7 @@ header > .header-flex,
 
 .card > h4 {
   margin-top: 5px;
-  font-size: 18px;
+  font-size: 24px;
   text-transform: uppercase;
 }
 
@@ -186,12 +181,13 @@ header > .header-flex,
 }
 
 .products-title {
-  width: 40%;
+  width: 35%;
   margin: 3rem auto;
   text-align: center;
 }
 
 .products-title > h2 {
+  font-size: 45px;
   text-transform: capitalize;
   margin: 30px 0 20px 0;
 }
@@ -267,8 +263,8 @@ header > .header-flex,
 
 .description-testi .author h3 {
   font-size: 22px;
-  text-transform: capitalize;
   font-style: italic;
+  color: #737373;
 }
 
 .description-testi .author h4 {
@@ -313,6 +309,7 @@ header > .header-flex,
   width: 20%;
   padding: 1.5rem 1rem;
   border: 1px solid #b9b9b9;
+  font-family: "Lora", serif;
 }
 
 .subscribe > .form-subscribe button {
@@ -321,9 +318,12 @@ header > .header-flex,
   background-color: #000000;
   color: #ffffff;
   text-transform: uppercase;
+  font-family: "Work Sans", sans-serif;
   cursor: pointer;
 }
 
+/* Se agrega funcionalidad al botón cuando el cursor pase por encima de él, 
+al instante cambiará de color la letra y el fondo */
 .subscribe > .form-subscribe button:hover {
   background-color: #529f0f;
   border: 1px solid #529f0f;
@@ -351,14 +351,15 @@ header > .header-flex,
 }
 
 .description-news h3:nth-of-type(2) {
-  font-size: 25px;
-  font-weight: 600;
+  font-size: 30px;
   line-height: 2rem;
 }
 
 .description-news h3:nth-of-type(3) {
+  padding-bottom: 1rem;
+  font-size: 22px;
   color: #737373;
-  line-height: 2rem;
+  line-height: 2.5rem;
 }
 
 .description-news > .link-news > a {
@@ -508,7 +509,7 @@ header > .header-flex,
   ya que, esas tarjetas son carruseles pero en este caso no fue solicitada esa funciÓN */
   .latest-products .card:not(:nth-of-type(1)),
   .new-products .card:not(:nth-of-type(1), :nth-of-type(5)),
-  .logo-sponsors:not(:nth-of-type(1))  {
+  .logo-sponsors:not(:nth-of-type(1)) {
     display: none;
   }
 
@@ -559,9 +560,40 @@ header > .header-flex,
   }
 
   /* Tercera seccion de tarjetas */
-  .container > .description-testi,
   .latest-news > .products-title > hr {
     width: 55%;
+  }
+
+  .description-news > .month {
+    font-size: 12px;
+  }
+
+  .description-news h3:nth-of-type(2) {
+    font-size: 22px;
+    line-height: 1.5rem;
+  }
+
+  .description-news h3:nth-of-type(3) {
+    font-size: 15px;
+    line-height: 1.5rem;
+  }
+
+  .description-news > .link-news > a {
+    font-size: 12px;
+  }
+
+  /* Testimonio */
+  .container > .description-testi {
+    width: 85%;
+  }
+
+  .description-testi .author h3 {
+    font-size: 18px;
+  }
+
+  .description-testi .author h4 {
+    margin: 1.5rem 0 4rem 0;
+    font-size: 12px;
   }
 
   /* Formulario */
@@ -578,12 +610,12 @@ header > .header-flex,
     width: 35%;
     padding: 1.2rem;
   }
-
+  /* Se agrega funcionalidad al botón cuando el sea clickeado, 
+  al instante cambiará de color la letra y el fondo */
   .subscribe > .form-subscribe button:active {
     background-color: #529f0f;
     border: 1px solid #529f0f;
     color: #000000;
-    transition: 500ms ease-in-out;
   }
 
   /* Patrocinadores */
