@@ -26,7 +26,7 @@ p {
 
 /* BODY */
 /* Se resetea el modelo de caja y se le aplica una nuevas medidas */
-body{
+body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -86,9 +86,9 @@ header > .header-flex,
 
 /* Slider */
 /* Se agrega la imagen para el slider principal con sus propiedades acordes,
- También se agrega una CUADRICULA(GRID LAYAUT) para poder centrar mejor el texto
+ También se agrega una CUADRICULA(GRID LAYOUT) para poder centrar mejor el texto
  principal sin necesidad de un marigin o padding lo cual afecta algunas veces un
- comportamiento no deseado en resoluciones  pequeñas. Ej: Mobile.  */
+ comportamiento no deseado en resoluciones pequeñas. Ej: Mobile.  */
 .container > .slider {
   background-image: url(./Imagenes/slider-2.jpg);
   background-repeat: no-repeat;
@@ -119,6 +119,10 @@ header > .header-flex,
 
 /* Main */
 /* Primera seccion de tarjetas */
+/* Se agrega una CUADRICULA(GRID LAYOUT) para poder organizar los items en columna
+ y visualizarlos uno a lado de otro, es decir, en una sola linea. De todas maneras
+ se coloco las imagenes desde CSS para poder manejar mejor los testo que se sobreponen
+ en ellas. */
 .container > .sale-cards {
   margin: 8rem 0;
   display: grid;
@@ -149,12 +153,19 @@ header > .header-flex,
 }
 
 .card > h4 {
+  margin-top: 5px;
   font-size: 18px;
   text-transform: uppercase;
 }
 
 /* Segunda seccion de tarjetas */
-/* tercera secion de tarjetas */
+/* Tercera secion de tarjetas */
+/* Con la ayuda de FLEXBOX se logro orientar facilmente los items de las tarjetas
+ para visualizarlas una al lado de otra, en base a esto se englobaron varias propiedades
+ para ahorar código y reutilizarlo en eso contenedores dependiendo lo que se necesita 
+ frente al mockup. */
+
+ /* Fondo de imagen para los contenedores necesarios */
 .latest-products,
 .latest-news {
   padding: 3rem 0;
@@ -163,14 +174,15 @@ header > .header-flex,
   background-size: cover;
 }
 
+ /* Fondo de color para los contenedores necesarios */
 .new-products,
 .footer-seccion {
   padding: 3rem 0;
-  background-color: #f8f8f8;
+  background-color: #F8F8F8;
 }
 
 .products-title {
-  width: 550px;
+  width: 40%;
   margin: 3rem auto;
   text-align: center;
 }
@@ -184,6 +196,7 @@ header > .header-flex,
   font-size: 18px;
 }
 
+ /* Uso de FLEXBOX para los conteedores necesarios para una organización de items optima */
 .latest-products .products-cards,
 .new-products .products-cards,
 .latest-news .products-cards,
@@ -240,7 +253,8 @@ header > .header-flex,
   color: #737373;
 }
 
-/* Testi */
+/* Testimonios */
+/* Se agregaron estilos básicos para esta parte de la estructura */
 .container > .description-testi {
   width: 40%;
   margin: 5rem auto;
@@ -266,7 +280,9 @@ header > .header-flex,
   font-size: 15px;
 }
 
-/* Form suscribe */
+/* Formulario de suscripción */
+/* Se agrego un fondo especifico para abarcar el formulario básico de suscripción 
+ como lo es un campo de texto y un botón */
 .container > .subscribe {
   background-image: url(./Imagenes/bg-2.jpg);
   background-repeat: no-repeat;
@@ -303,7 +319,9 @@ header > .header-flex,
   text-transform: uppercase;
 }
 
-/* News */
+/* Noticias */
+/* Ya con FLEXBOX aplicado anteriomente solo se agregaron estilos para textos, 
+ proporciones, colores entr otras. */
 .latest-news > .products-title > hr {
   width: 60%;
 }
@@ -339,6 +357,7 @@ header > .header-flex,
 }
 
 /* Patrocinadores */
+/* Ya con FLEXBOX aplicado anteriomente solo se agrego algo de espaciado y tamaño a los items */
 .container > .sponsors > .products-cards {
   width: 80%;
   margin: 4rem auto;
@@ -349,6 +368,7 @@ header > .header-flex,
 }
 
 /* Footer */
+/* Ya con FLEXBOX aplicado anteriomente se algunos colores, proporciones y espaciado entre items */
 .footer-seccion .footer-links > ul {
   padding: 0;
   text-transform: capitalize;
@@ -385,7 +405,14 @@ header > .header-flex,
   font-weight: 600;
 }
 
+.copyright-footer,
+.copyright > h3{
+  font-size: 18px;
+}
+
 /* Media Queries para Mobile */
+/* Para poder tener responsive necesitamos de la palabra clave Media seguido de
+ un maximo o minimo tamaño que relacione las resoluciones de algunos pantallas en dispositivos */
 @media screen and (max-width: 640px) {
   /* Contenedor general */
   .container-body {
@@ -402,7 +429,7 @@ header > .header-flex,
     margin: 0;
     padding: 0;
     position: fixed;
-    top: 82px;
+    top: 70px;
     bottom: 0;
     width: 100%;
     left: 0;
@@ -428,13 +455,10 @@ header > .header-flex,
     width: 50%;
     text-align: right;
   }
+
   /* Silder general*/
   .description-slider h1 {
-    font-size: 38px;
-  }
-
-  .container > .slider {
-    height: 650px;
+    font-size: 35px;
   }
 
   .slider .description-slider {
@@ -447,8 +471,12 @@ header > .header-flex,
     grid-auto-flow: row;
   }
 
-  .products-title > h2 {
+  h2 {
     font-size: 35px;
+  }
+
+  .card > h4 {
+    font-size: 15px;
   }
 
   .sale-cards .card {
@@ -478,7 +506,7 @@ header > .header-flex,
   .latest-news,
   .new-products,
   .footer-seccion {
-    padding: 3rem 1rem;
+    padding: 1rem;
   }
 
   .latest-products .products-cards,
@@ -492,7 +520,7 @@ header > .header-flex,
 
   .products-cards > .card > img {
     width: 100%;
-    height: 450px;
+    height: 350px;
   }
 
   .products-cards > .card > .circle-sale {
@@ -507,7 +535,11 @@ header > .header-flex,
   }
 
   .products-title {
-    width: 85%;
+    width: 100%;
+  }
+
+  .products-title h3 {
+    font-size: 14px;
   }
 
   .latest-news .products-cards > .card {
@@ -529,7 +561,7 @@ header > .header-flex,
   }
 
   .subscribe > h1 {
-    font-size: 35px;
+    font-size: 28px;
   }
 
   .subscribe > .form-subscribe input {
@@ -545,6 +577,10 @@ header > .header-flex,
     padding: 2rem 0;
     text-align: center;
   }
+
+  .container > .sponsors > .products-cards {
+    margin: 0 auto;
+}
 
   /* Footer */
   .products-cards,
