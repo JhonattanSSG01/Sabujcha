@@ -56,7 +56,7 @@ header > .header-flex,
  que se oculte mientras este en resoluciones de Desktop */
 .nav-label,
 .nav-input,
-.top  {
+.top {
   display: none;
 }
 
@@ -79,9 +79,11 @@ header > .header-flex,
   font-size: 15px;
   font-weight: 600;
   border: 1px solid #ffffff;
+  cursor: pointer;
 }
 
-.header-flex .header-buy i {
+.header-flex .header-buy a > i {
+  color: #000000;
   margin-left: 1rem;
 }
 
@@ -145,11 +147,12 @@ header > .header-flex,
 .sale-cards .card {
   width: 80%;
   margin: 0 auto;
-  padding: 5rem 2rem;
+  padding: 7rem 2rem;
 }
 
 .card > h2 {
-  margin-bottom: 0;
+  margin: 1rem 0;
+  font-size: 60px;
   color: #529f0f;
 }
 
@@ -166,7 +169,7 @@ header > .header-flex,
  para ahorar código y reutilizarlo en eso contenedores dependiendo lo que se necesita 
  frente al mockup. */
 
- /* Fondo de imagen para los contenedores necesarios */
+/* Fondo de imagen para los contenedores necesarios */
 .latest-products,
 .latest-news {
   padding: 3rem 0;
@@ -175,11 +178,11 @@ header > .header-flex,
   background-size: cover;
 }
 
- /* Fondo de color para los contenedores necesarios */
+/* Fondo de color para los contenedores necesarios */
 .new-products,
 .footer-seccion {
   padding: 3rem 0;
-  background-color: #F8F8F8;
+  background-color: #f8f8f8;
 }
 
 .products-title {
@@ -190,14 +193,14 @@ header > .header-flex,
 
 .products-title > h2 {
   text-transform: capitalize;
-  margin: 30px 0 5px 0;
+  margin: 30px 0 20px 0;
 }
 
 .products-title h3 {
   font-size: 18px;
 }
 
- /* Uso de FLEXBOX para los conteedores necesarios para una organización de items optima */
+/* Uso de FLEXBOX para los conteedores necesarios para una organización de items optima */
 .latest-products .products-cards,
 .new-products .products-cards,
 .latest-news .products-cards,
@@ -318,13 +321,21 @@ header > .header-flex,
   background-color: #000000;
   color: #ffffff;
   text-transform: uppercase;
+  cursor: pointer;
+}
+
+.subscribe > .form-subscribe button:hover {
+  background-color: #529f0f;
+  border: 1px solid #529f0f;
+  color: #000000;
+  transition: 500ms ease-in-out;
 }
 
 /* Noticias */
 /* Ya con FLEXBOX aplicado anteriomente solo se agregaron estilos para textos, 
  proporciones, colores entr otras. */
 .latest-news > .products-title > hr {
-  width: 60%;
+  width: 45%;
 }
 
 .latest-news .products-cards > .card {
@@ -407,8 +418,8 @@ header > .header-flex,
 }
 
 .copyright-footer,
-.copyright > h3{
-  font-size: 18px;
+.copyright > h3 {
+  font-size: 208px;
 }
 
 /* Media Queries para Mobile */
@@ -421,15 +432,24 @@ header > .header-flex,
   }
 
   /* Menu hamburguesa */
+
+  header > .header-flex,
+  .header-nav > nav > .nav-menu {
+    padding: 1rem 0.5rem 1.5rem 0.5rem;
+  }
+
   .nav-label {
     display: flex;
     order: 3;
+    border: 1px solid black;
+    padding: 6px;
+    font-size: 22px;
   }
 
   .header-nav > nav > .nav-menu {
     margin: 0;
     padding: 0;
-    position: fixed;
+    position: absolute;
     top: 70px;
     bottom: 0;
     width: 100%;
@@ -437,6 +457,7 @@ header > .header-flex,
     justify-content: space-evenly;
     flex-direction: column;
     clip-path: circle(0 at center);
+    z-index: 2;
   }
 
   .nav-menu > li > a {
@@ -453,7 +474,7 @@ header > .header-flex,
   }
 
   .header-buy {
-    width: 50%;
+    width: 45%;
     text-align: right;
   }
 
@@ -472,36 +493,22 @@ header > .header-flex,
     grid-auto-flow: row;
   }
 
-  h2 {
-    font-size: 30px;
-  }
-
-  .card > h4 {
-    font-size: 15px;
+  .sale-cards > .card > h2 {
+    font-size: 40px;
   }
 
   .sale-cards .card {
     margin: 1rem auto;
-    padding: 4rem 2rem;
+    padding: 3rem 2rem;
   }
 
   /* Seguna seccion de tarjetas */
   /* Tercera seccion de tarjetas */
   /* Se ocultan las tarjetas que no son necesarias visualizar en Mobile, 
-  ya que, esas tarjetas son carruseles pero en este caso no fue solicitado */
-  .latest-products .card:nth-of-type(2),
-  .latest-products .card:nth-of-type(3),
-  .latest-products .card:nth-of-type(4),
-  .new-products .card:nth-of-type(2),
-  .new-products .card:nth-of-type(3),
-  .new-products .card:nth-of-type(4),
-  .new-products .card:nth-of-type(6),
-  .new-products .card:nth-of-type(7),
-  .new-products .card:nth-of-type(8),
-  .sponsors .logo-sponsors:nth-of-type(2),
-  .logo-sponsors:nth-of-type(3),
-  .logo-sponsors:nth-of-type(4),
-  .logo-sponsors:nth-of-type(5) {
+  ya que, esas tarjetas son carruseles pero en este caso no fue solicitada esa funciÓN */
+  .latest-products .card:not(:nth-of-type(1)),
+  .new-products .card:not(:nth-of-type(1), :nth-of-type(5)),
+  .logo-sponsors:not(:nth-of-type(1))  {
     display: none;
   }
 
@@ -517,8 +524,14 @@ header > .header-flex,
   .latest-news .products-cards,
   .sponsors .products-cards,
   .footer-seccion .footer-links,
-  .copyright-footer .copyright {
+  .copyright-footer .copyright,
+  .products-title {
     width: 100%;
+  }
+
+  .products-title > h2,
+  .subscribe > h1 {
+    font-size: 25px;
   }
 
   .products-cards > .card > img {
@@ -537,25 +550,18 @@ header > .header-flex,
     margin: 1.1rem 0;
   }
 
-  .products-title {
-    width: 100%;
-  }
-
   .products-title h3 {
-    font-size: 14px;
+    font-size: 13px;
   }
 
   .latest-news .products-cards > .card {
     width: 90%;
   }
 
-  .latest-news > .products-title > hr {
-    width: 50%;
-  }
-
   /* Tercera seccion de tarjetas */
-  .container > .description-testi {
-    width: 70%;
+  .container > .description-testi,
+  .latest-news > .products-title > hr {
+    width: 55%;
   }
 
   /* Formulario */
@@ -563,16 +569,21 @@ header > .header-flex,
     margin: 3rem 0;
   }
 
-  .subscribe > h1 {
-    font-size: 28px;
-  }
-
   .subscribe > .form-subscribe input {
-    width: 50%;
+    width: 45%;
+    padding: 1.2rem;
   }
 
   .subscribe > .form-subscribe button {
-    width: 30%;
+    width: 35%;
+    padding: 1.2rem;
+  }
+
+  .subscribe > .form-subscribe button:active {
+    background-color: #529f0f;
+    border: 1px solid #529f0f;
+    color: #000000;
+    transition: 500ms ease-in-out;
   }
 
   /* Patrocinadores */
@@ -583,7 +594,7 @@ header > .header-flex,
 
   .container > .sponsors > .products-cards {
     margin: 0 auto;
-}
+  }
 
   /* Footer */
   .products-cards,
@@ -595,6 +606,12 @@ header > .header-flex,
   .copyright img {
     width: 90%;
     margin: 1rem;
+  }
+
+  .card > h4,
+  .copyright-footer,
+  .copyright > h3 {
+    font-size: 16px;
   }
 
   /* Punto de enclaje para regresar a la parte superior sin necesidad de hacer scrooll */
