@@ -98,11 +98,11 @@ header > .header-flex,
   text-align: center;
 }
 
-.slider .description-slider {
+.slider > .description-slider {
   grid-area: 2 / 2 / 3 / 5;
 }
 
-.description-slider h1 {
+.description-slider > h1 {
   margin-bottom: 0.8rem;
   font-size: 70px;
   font-weight: 300;
@@ -423,6 +423,121 @@ al instante cambiará de color la letra y el fondo */
   font-size: 20px;
 }
 
+/* Media Queries para Tablets */
+/* Para poder tener responsive necesitamos de la palabra clave Media seguido de
+ un maximo o minimo tamaño que relacione las resoluciones de algunos pantallas en dispositivos */
+@media screen and (max-width: 1024px) and (min-width: 640px) {
+  /* Contenedor general */
+  .container-body {
+    margin: 0 1rem;
+  }
+
+  /* Menu hamburguesa */
+  header > .header-flex,
+  .header-nav > nav > .nav-menu {
+    padding: 1rem 0.5rem;
+  }
+
+  .header-nav li > a {
+    margin-right: 0.8rem;
+  }
+
+  .header-flex .header-logo {
+    width: 25%;
+    text-align: center;
+  }
+
+  .header-flex .header-buy a > i {
+    margin-left: 0;
+  }
+
+  /* Slider */
+  .slider > .description-slider {
+    grid-area: 2 / 1 / 3 / 6;
+  }
+
+  /* Primera seccion de tarjetas */
+  .container > .sale-cards {
+    margin: 4rem 0;
+    grid-auto-flow: row;
+  }
+
+  .sale-cards > .card > h2 {
+    font-size: 55px;
+  }
+
+  .sale-cards .card {
+    margin: 1rem auto;
+  }
+
+  /* Seguna seccion de tarjetas */
+  /* Tercera seccion de tarjetas */
+  .latest-products .products-cards,
+  .new-products .products-cards,
+  .latest-news .products-cards,
+  .sponsors .products-cards,
+  .copyright-footer .copyright {
+    width: 100%;
+  }
+
+  .products-title,
+  .container > .description-testi,
+  .footer-seccion > .footer-links {
+    width: 80%;
+  }
+
+  .products-title > h2 {
+    font-size: 40px;
+  }
+
+  /* Formulario */
+  .subscribe > .form-subscribe input {
+    width: 60%;
+  }
+
+  .subscribe > .form-subscribe button {
+    width: 30%;
+  }
+
+  /* Tercera seccion tarjetas */
+  .description-news > .month,
+  .description-news > .link-news > a {
+    font-size: 12px;
+  }
+
+  .description-news h3:nth-of-type(2) {
+    font-size: 22px;
+    line-height: 1.5rem;
+  }
+
+  .description-news h3:nth-of-type(3) {
+    font-size: 15px;
+    line-height: 1.5rem;
+  }
+
+  /* Footer */
+  .footer-links > ul {
+    width: 35%;
+  }
+
+  /* Punto de enclaje para regresar a la parte superior sin necesidad de hacer scrooll */
+  .top {
+    display: block;
+    padding: 10px;
+    width: 30px;
+    background: #303030;
+    position: fixed;
+    bottom: 90px;
+    right: 15px;
+    text-align: center;
+  }
+
+  .top > a > i {
+    font-size: 30px;
+    color: #fff;
+  }
+}
+
 /* Media Queries para Mobile */
 /* Para poder tener responsive necesitamos de la palabra clave Media seguido de
  un maximo o minimo tamaño que relacione las resoluciones de algunos pantallas en dispositivos */
@@ -433,7 +548,6 @@ al instante cambiará de color la letra y el fondo */
   }
 
   /* Menu hamburguesa */
-
   header > .header-flex,
   .header-nav > nav > .nav-menu {
     padding: 1rem 0.5rem 1.5rem 0.5rem;
@@ -480,12 +594,12 @@ al instante cambiará de color la letra y el fondo */
   }
 
   /* Silder general*/
-  .description-slider h1 {
-    font-size: 35px;
+  .slider > .description-slider {
+    grid-area: 2 / 1 / 3 / 6;
   }
 
-  .slider .description-slider {
-    grid-area: 2 / 1 / 3 / 6;
+  .description-slider h1 {
+    font-size: 35px;
   }
 
   /* Primera seccion de tarjetas */
@@ -633,6 +747,11 @@ al instante cambiará de color la letra y el fondo */
   .footer-links,
   .copyright {
     flex-direction: column;
+  }
+
+  .footer-links > ul > h3 {
+    font-size: 22px;
+    font-weight: 200;
   }
 
   .copyright img {
